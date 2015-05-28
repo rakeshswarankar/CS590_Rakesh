@@ -1,0 +1,11 @@
+Thu May 28 16:03:40 CDT 2015
+-------CS590 HM1 Done By Rakesh Swarankar--------------------
+System name: invader
+User information:
+full name: Rakesh K Swarankar
+log name: rks0007
+uid: 2471
+gid: 210
+HOME dir: /home/csuser/rks0007
+Default shell: /bin/bash
+-------------------------------
