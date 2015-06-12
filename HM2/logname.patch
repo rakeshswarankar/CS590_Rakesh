@@ -1,0 +1,32 @@
+--- logname.c	2015-06-05 18:07:34.484375832 -0500
++++ core/logname.c	2015-06-11 22:03:41.877393343 -0500
+@@ -18,8 +18,7 @@
+ #include <stdio.h>
+ #include <sys/types.h>
+ #include <getopt.h>
+-#include <unistd.h>
+-#include <pwd.h>
++
+ #include "system.h"
+ #include "error.h"
+ #include "long-options.h"
+@@ -53,8 +52,7 @@
+ main (int argc, char **argv)
+ {
+   char *cp;
+-  uid_t uid;
+-struct passwd *mypasswd;
++
+   initialize_main (&argc, &argv);
+   set_program_name (argv[0]);
+   setlocale (LC_ALL, "");
+@@ -79,9 +77,6 @@
+   if (cp)
+     {
+       puts (cp);
+-	uid = getuid();
+-mypasswd = getpwuid(uid);
+-      puts (mypasswd->pw_gecos);
+       exit (EXIT_SUCCESS);
+     }
+   /* POSIX prohibits using a fallback technique.  */
